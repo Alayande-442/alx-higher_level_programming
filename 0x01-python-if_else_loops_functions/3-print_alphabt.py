@@ -1,5 +1,6 @@
-#!/usr/bin/python3  
-for alpha_letters in range(ord('a'), ord('z')+1):
-    if alpha_letters != 'q' and alpha_letters != 'e':
-        print("{:c}".format(alpha_letters), end="")
-    
+#!/usr/bin/python3
+for i in range(97, 123):
+    if chr(i) != "q" and chr(i) != "e":
+        print(chr(i).format(), end='')
+
+
