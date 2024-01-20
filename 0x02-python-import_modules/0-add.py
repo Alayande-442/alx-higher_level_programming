@@ -1,3 +1,5 @@
 #!/usr/bin/python3
 import add_0
-print(add_0.add(1,2))
+a = 1
+b = 2
+print(f"{a} + {b} = {a + b}")
