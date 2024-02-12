@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" a class called with pass """
+""" A class that defines a rec"""
+
+
 class Rectangle:
     """ the class """
     pass
