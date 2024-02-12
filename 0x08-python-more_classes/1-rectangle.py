@@ -1,6 +1,11 @@
 #!/usr/bin/python3
+""" still a rec class"""
+
+
 class Rectangle:
+    """the class proper"""
     def __init__(self, width=0, height=0):
+        """initialize rec"""
         self.width = width
         self.height = height
 
@@ -14,7 +19,7 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-            self.__width = value
+        self.__width = value
 
     @property
     def height(self):
@@ -27,4 +32,3 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-
