@@ -1,7 +1,5 @@
 #!/usr/bin/node
-const firstName = "C is fun";
-const secondName = "Python is cool";
-const thirdName = "JavaScript is amazing";
-console.log(firstName);
-console.log(secondName);
-console.log(thirdName);
+// Print string “Javascript is amazing”
+
+const myVar = 'Javascript is amazing';
+console.log(myVar);
