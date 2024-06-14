@@ -15,13 +15,15 @@ request(apiUrl, { json: true }, (error, response, body) => {
     return;
   }
 
-  const films = body.results;
+  const films = body.results || [];
   let count = 0;
 
   films.forEach(film => {
-    if (film.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`)) {
-      count++;
-    }
+    film.characters.forEach(character => {
+      if (character.includes(`/api/people/${characterId}/`)) {
+        count++;
+      }
+    });
   });
 
   console.log(count);
