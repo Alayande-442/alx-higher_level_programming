@@ -14,15 +14,18 @@ if (!url || !filePath) {
 request(url, (error, response, body) => {
   if (error) {
     console.error('Error while requesting the URL:', error);
-    return;
+    process.exit(1);
+  }
+
+  if (response.statusCode !== 200) {
+    console.error('Failed to fetch URL. Status code:', response.statusCode);
+    process.exit(1);
   }
 
   fs.writeFile(filePath, body, 'utf8', (err) => {
     if (err) {
       console.error('Error while writing to file:', err);
-      return;
+      process.exit(1);
     }
-
-    console.log('File saved successfully');
   });
 });
